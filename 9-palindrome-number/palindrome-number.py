@@ -2,10 +2,10 @@ class Solution:
     def isPalindrome(self, x: int) -> bool:
         n=x
         sum=0
-        while n >0:
-           
-            ld=n%10
+        if x<0:
+            return False
+        while x>0:
+            ld=x%10
             sum=(sum*10)+ld
-            n=n//10
-        
-        return x==sum
+            x=x//10
+        return sum==n
